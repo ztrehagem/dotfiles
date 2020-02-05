@@ -1,0 +1,13 @@
+alias l="ls -lF"
+alias la="l -a"
+alias cl="clear"
+alias g="git"
+alias n="npm"
+alias nr="npm run"
+alias nrp="npm run --prefix"
+alias ns="npm start"
+alias mnode="node --experimental-modules"
+alias d="docker-compose"
+alias v="vagrant"
+alias vs="open -a 'Visual Studio Code'"
+
