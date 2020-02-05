@@ -1,0 +1,34 @@
+[user]
+	name = SUWA Shigeki
+	email = shigeki.suwa@ztrehagem.dev
+	signingkey = ~/.ssh/git.pub
+[commit]
+	gpgsign = false
+	# gpgsign = true
+[gpg]
+	format = ssh
+[credential]
+	helper = cache
+	# helper = osxkeychain
+[alias]
+	graph = log --oneline --graph --decorate=full
+	g = graph
+	ga = g --all
+	f = fetch
+	fp = fetch --prune
+	fap = fetch --all --prune
+	s = status -sb
+	sw = switch
+	ch = checkout
+	b = branch
+	com = commit -m
+	amend = commit --amend
+	c = cz c
+	publish = "!f(){ git push -u ${1:-origin} $(git rev-parse --abbrev-ref HEAD) ;};f"
+	pub = publish
+	cleanbranch = "!git branch --merged | xargs git branch -d 2>/dev/null"
+	cb = cleanbranch
+[init]
+	defaultBranch = main
+[pull]
+	ff = only

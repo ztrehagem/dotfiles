@@ -1,0 +1,10 @@
+[include]
+ 	path = ~/.dotfiles/shared/git/.gitconfig
+[user]
+	# name = SUWA Shigeki
+	# email = shigeki.suwa@ztrehagem.dev
+	# signingkey = ~/.ssh/git.pub
+[credential]
+	# helper = osxkeychain
+[commit]
+	# gpgsign = true
