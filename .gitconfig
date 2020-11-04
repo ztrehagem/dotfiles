@@ -1,0 +1,25 @@
+[user]
+	name = Shigeki Suwa
+	email = shigeki.suwa@ztrehagem.dev
+[alias]
+	graph = log --oneline --graph --decorate=full
+	g = graph
+	ga = g --all
+	fp = fetch -p
+	s = status
+	ch = checkout
+	com = commit -m
+	amend = commit --amend
+	# div: git div <new_branch> [start_point]
+	# create new branch at start_point (default: current point) and checkout
+	div = "!f(){  git checkout -b $1 --no-track $2  ;};f"
+	# pub: git pub
+	# push current branch as same name to origin with tracking
+	pub = "!git push --set-upstream origin `git status | head -n 1 | sed 's/On branch //'`"
+	# remove all merged branches
+	cleanbranch = "!git branch --merged | xargs git branch -d 2>/dev/null"
+	cb = cleanbranch
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore_global
