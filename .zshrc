@@ -1,3 +1,8 @@
+### for interactive shell
+
+PROMPT="%F{green}%n%f %F{cyan}%1~%f%# "
+RPROMPT="%F{magenta}%?%f %m"
+
 alias l="ls -lF"
 alias la="l -a"
 alias g="git"
@@ -11,18 +16,4 @@ alias vs="open -a 'Visual Studio Code'"
 alias y="yarn"
 alias yi="yarn install"
 alias ya="yarn add"
-
-# nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# direnv
-eval "$(direnv hook bash)"
-
-# Deno
-export PATH="$HOME/.deno/bin:$PATH"
 
