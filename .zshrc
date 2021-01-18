@@ -3,6 +3,10 @@
 PROMPT="%F{green}%n%f@%F{cyan}%m%f %1~ %# "
 RPROMPT="%F{magenta}%?%f"
 
+eval "$(nodenv init -)"
+eval "$(rbenv init -)"
+eval "$(direnv hook bash)"
+
 alias l="ls -lF"
 alias la="l -a"
 alias g="git"
