@@ -1,7 +1,7 @@
 ### for interactive shell
 
-PROMPT="%F{green}%n%f %F{cyan}%1~%f %# "
-RPROMPT="%F{magenta}%?%f %m"
+PROMPT="%F{green}%n%f@%F{cyan}%m%f %1~ %# "
+RPROMPT="%F{magenta}%?%f"
 
 alias l="ls -lF"
 alias la="l -a"
