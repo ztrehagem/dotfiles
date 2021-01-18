@@ -1,6 +1,6 @@
 ### for interactive shell
 
-PROMPT="%F{green}%n%f %F{cyan}%1~%f%# "
+PROMPT="%F{green}%n%f %F{cyan}%1~%f %# "
 RPROMPT="%F{magenta}%?%f %m"
 
 alias l="ls -lF"
