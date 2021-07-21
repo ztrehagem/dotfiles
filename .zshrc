@@ -5,7 +5,7 @@ RPROMPT="%F{magenta}%?%f"
 
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 
 alias l="ls -lF"
 alias la="l -a"
