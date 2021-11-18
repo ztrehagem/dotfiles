@@ -7,6 +7,7 @@
 	ga = g --all
 	fp = fetch -p
 	s = status
+	sw = switch
 	ch = checkout
 	com = commit -m
 	amend = commit --amend
