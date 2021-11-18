@@ -20,4 +20,5 @@ alias vs="open -a 'Visual Studio Code'"
 alias y="yarn"
 alias yi="yarn install"
 alias ya="yarn add"
+alias be="bundle exec"
 
