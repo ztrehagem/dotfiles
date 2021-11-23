@@ -3,9 +3,9 @@
 PROMPT="%F{green}%n%f@%F{cyan}%m%f %1~ %# "
 RPROMPT="%F{magenta}%?%f"
 
-eval "$(nodenv init -)"
-eval "$(rbenv init -)"
-eval "$(direnv hook zsh)"
+type nodenv >/dev/null 2>&1 && eval "$(nodenv init -)"
+type rbenv  >/dev/null 2>&1 && eval "$(rbenv init -)"
+type direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
 
 alias l="ls -lF"
 alias la="l -a"
