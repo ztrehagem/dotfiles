@@ -21,7 +21,7 @@
 	cleanbranch = "!git branch --merged | xargs git branch -d 2>/dev/null"
 	cb = cleanbranch
 [credential]
-	helper = osxkeychain
+	helper = cache
 [core]
 	excludesfile = ~/.gitignore_global
 [init]
