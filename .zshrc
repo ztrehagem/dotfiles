@@ -3,6 +3,8 @@
 PROMPT="%F{green}%n%f@%F{cyan}%m%f %1~ %# "
 RPROMPT="%F{magenta}%?%f"
 
+[ -d /home/linuxbrew ] && eval `/home/linuxbrew/.linuxbrew/bin/brew shellenv`
+
 type nodenv >/dev/null 2>&1 && eval "$(nodenv init -)"
 type rbenv  >/dev/null 2>&1 && eval "$(rbenv init -)"
 type direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
