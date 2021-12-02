@@ -1,7 +1,6 @@
 ### for interactive shell
 
-PROMPT="%F{green}%n%f@%F{cyan}%m%f %1~ %# "
-RPROMPT="%F{magenta}%?%f"
+PROMPT=$'[%T] %l %F{magenta}%?%f %U%~%u\n%F{green}%n%f@%F{cyan}%m%f %# '
 
 [ -d /home/linuxbrew ] && eval `/home/linuxbrew/.linuxbrew/bin/brew shellenv`
 
