@@ -1,12 +1,6 @@
-### for interactive shell
+# .zshrc - login shell & interactive shell
 
 PROMPT=$'[%T] %l %F{magenta}%?%f %U%~%u\n%F{green}%n%f@%F{cyan}%m%f %# '
-
-[ -d /home/linuxbrew ] && eval `/home/linuxbrew/.linuxbrew/bin/brew shellenv`
-
-type nodenv >/dev/null 2>&1 && eval "$(nodenv init -)"
-type rbenv  >/dev/null 2>&1 && eval "$(rbenv init -)"
-type direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
 
 alias l="ls -lF"
 alias la="l -a"
@@ -21,3 +15,6 @@ alias vs="open -a 'Visual Studio Code'"
 alias y="yarn"
 alias be="bundle exec"
 
+function path() {
+  echo ${1:-$PATH} | sed -e 's/:/\n/g'
+}
