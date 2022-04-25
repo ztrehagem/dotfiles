@@ -13,8 +13,11 @@
 	s = status
 	sw = switch
 	ch = checkout
+	b = branch
 	com = commit -m
 	amend = commit --amend
+	publish = "!f(){ git push -u ${1:-origin} $(git rev-parse --abbrev-ref HEAD) ;};f"
+	pub = publish
 	cleanbranch = "!git branch --merged | xargs git branch -d 2>/dev/null"
 	cb = cleanbranch
 [credential]
