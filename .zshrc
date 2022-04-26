@@ -1,6 +1,6 @@
 # .zshrc - login shell & interactive shell
 
-PROMPT=$'[%T] %l %F{magenta}%?%f %U%~%u\n%F{green}%n%f@%F{cyan}%m%f %# '
+. $(dirname $0)/zshprompt.sh
 
 hash asdf &> /dev/null && . $(brew --prefix asdf)/libexec/asdf.sh
 hash direnv &> /dev/null && eval "$(direnv hook zsh)"
