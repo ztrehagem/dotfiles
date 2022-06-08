@@ -16,6 +16,7 @@
 	b = branch
 	com = commit -m
 	amend = commit --amend
+	c = cz c
 	publish = "!f(){ git push -u ${1:-origin} $(git rev-parse --abbrev-ref HEAD) ;};f"
 	pub = publish
 	cleanbranch = "!git branch --merged | xargs git branch -d 2>/dev/null"
