@@ -10,7 +10,7 @@
 	ga = g --all
 	f = fetch
 	fp = fetch -p
-	s = status
+	s = status -sb
 	sw = switch
 	ch = checkout
 	b = branch
