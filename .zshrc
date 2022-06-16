@@ -1,14 +1,12 @@
 # .zshrc - login shell & interactive shell
 
-# zsh prompt
-setopt PROMPT_SUBST
-PROMPT_GIT_BRANCH='BRANCH=$(git rev-parse --abbrev-ref @ 2> /dev/null) ; [ ! -z $BRANCH ] && echo " %S ${BRANCH} %s"'
-PROMPT=$'[%*] %U%~%u%(?,, %S%F{magenta} ↵%? %f%s)$(eval $PROMPT_GIT_BRANCH)\n%B%(!,%F{red},%F{green})%n%f@%F{cyan}%m%f%b %# '
+# use OpenSSL@3
+brew --prefix openssl@3 &> /dev/null && export PATH=$(brew --prefix openssl@3)/bin:$PATH
 
-# shims
-hash asdf &> /dev/null && . $(brew --prefix asdf)/libexec/asdf.sh
+# enable asdf shims
+brew --prefix asdf &> /dev/null && . $(brew --prefix asdf)/libexec/asdf.sh
 
-# direnv
+# enable direnv hook
 hash direnv &> /dev/null && eval "$(direnv hook zsh)"
 
 # utils
@@ -24,4 +22,9 @@ alias v="vagrant"
 alias vs="open -a 'Visual Studio Code'"
 alias y="yarn"
 alias be="bundle exec"
-function path { echo ${1:-$PATH} | sed -e 's/:/\n/g' }
+path() { echo ${1:-$PATH} | sed -e 's/:/\n/g' }
+
+# zsh prompt
+setopt PROMPT_SUBST
+PROMPT_GIT_BRANCH='BRANCH=$(git rev-parse --abbrev-ref @ 2> /dev/null) ; [ ! -z $BRANCH ] && echo " %S ${BRANCH} %s"'
+PROMPT=$'[%*] %U%~%u%(?,, %S%F{magenta} ↵%? %f%s)$(eval $PROMPT_GIT_BRANCH)\n%B%(!,%F{red},%F{green})%n%f@%F{cyan}%m%f%b %# '
