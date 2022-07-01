@@ -24,8 +24,6 @@
 [credential]
 	helper = cache
 	# helper = osxkeychain
-[core]
-	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
 [pull]
