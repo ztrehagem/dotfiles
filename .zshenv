@@ -1,7 +1,7 @@
 # .zshenv - login shell & interactive shell & shell scripts
 
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.linuxbrew/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export EDITOR=vi
 export GPG_TTY=$TTY
 
