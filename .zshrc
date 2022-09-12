@@ -1,5 +1,12 @@
 # .zshrc - login shell & interactive shell
 
+if type brew &> /dev/null ; then
+  # use OpenSSL v3
+  export PATH=$(brew --prefix openssl@3)/bin:$PATH
+  # enable asdf shims
+  . $(brew --prefix asdf)/libexec/asdf.sh &> /dev/null
+fi
+
 # enable direnv hook
 type direnv &> /dev/null && eval "$(direnv hook zsh)"
 
