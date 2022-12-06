@@ -1,12 +1,5 @@
 # .zshrc - login shell & interactive shell
 
-if type brew &> /dev/null ; then
-  # use OpenSSL v3
-  export PATH=$(brew --prefix openssl@3)/bin:$PATH
-  # enable asdf shims
-  . $(brew --prefix asdf)/libexec/asdf.sh &> /dev/null
-fi
-
 # enable direnv hook
 type direnv &> /dev/null && eval "$(direnv hook zsh)"
 
@@ -33,4 +26,3 @@ PROMPT=$'[%*] %U%~%u%(?,, %S%F{magenta} ↵%? %f%s)$(eval $PROMPT_GIT_BRANCH)\n%
 
 # ssh agent
 # ex.: ssh-add ~/.ssh/id_ed25519
-
