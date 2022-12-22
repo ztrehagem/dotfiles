@@ -1,36 +1,9 @@
 # .zshrc - login shell & interactive shell
 
-# config PATH for brew packages
-if type brew &> /dev/null ; then
-  # use OpenSSL v3
-  export PATH=$(brew --prefix openssl@3)/bin:$PATH
-  # enable asdf shims
-  . $(brew --prefix asdf)/libexec/asdf.sh &> /dev/null
-fi
-
-# enable direnv hook
-type direnv &> /dev/null && eval "$(direnv hook zsh)"
-
-# utils
-alias l="ls -lF"
-alias la="l -a"
-alias g="git"
-alias n="npm"
-alias nr="npm run"
-alias nrp="npm run --prefix"
-alias ns="npm start"
-alias d="docker"
-alias dc="docker compose"
-alias v="vagrant"
-alias vs="open -a 'Visual Studio Code'"
-alias y="yarn"
-alias be="bundle exec"
-path() { echo ${1:-$PATH} | sed -e 's/:/\n/g' }
-
-# zsh prompt
-setopt PROMPT_SUBST
-PROMPT_GIT_BRANCH='BRANCH=$(git rev-parse --abbrev-ref @ 2> /dev/null) ; [ ! -z $BRANCH ] && echo " %S ${BRANCH} %s"'
-PROMPT=$'[%*] %U%~%u%(?,, %S%F{magenta} ↵%? %f%s)$(eval $PROMPT_GIT_BRANCH)\n%B%(!,%F{red},%F{green})%n%f@%F{cyan}%m%f%b %# '
+. $(dirname $0)/sh/brew.sh
+. $(dirname $0)/sh/direnv.sh
+. $(dirname $0)/sh/alias.sh
+. $(dirname $0)/sh/prompt.zsh
 
 # ssh agent
 # ex.: ssh-add ~/.ssh/id_ed25519
