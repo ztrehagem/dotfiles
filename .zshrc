@@ -1,6 +1,6 @@
 # .zshrc - login shell & interactive shell
 
-. $(dirname $0)/sh/brew.sh
+. $(dirname $0)/sh/shim.sh
 . $(dirname $0)/sh/direnv.sh
 . $(dirname $0)/sh/alias.sh
 . $(dirname $0)/sh/prompt.zsh

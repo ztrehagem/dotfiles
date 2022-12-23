@@ -1,4 +1,4 @@
-alias l="ls -lF"
+alias l="ls -lFG"
 alias la="l -a"
 alias g="git"
 alias n="npm"
@@ -11,7 +11,3 @@ alias v="vagrant"
 alias vs="open -a 'Visual Studio Code'"
 alias y="yarn"
 alias be="bundle exec"
-
-path() {
-  echo ${1:-$PATH} | sed -e 's/:/\n/g'
-}
