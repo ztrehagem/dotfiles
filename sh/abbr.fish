@@ -1,12 +1,12 @@
-abbr --add --global l ls -lFG
-abbr --add --global la ls -lFGa
-abbr --add --global g git
-abbr --add --global n npm
-abbr --add --global nr npm run
-abbr --add --global nrp npm run --prefix
-abbr --add --global ns npm start
-abbr --add --global d docker
-abbr --add --global dc docker compose
-abbr --add --global v vagrant
-abbr --add --global y yarn
-abbr --add --global be bundle exec
+abbr -a -g l ls -lFG
+abbr -a -g la ls -lFGa
+abbr -a -g g git
+abbr -a -g n npm
+abbr -a -g nr npm run
+abbr -a -g nrp npm run --prefix
+abbr -a -g ns npm start
+abbr -a -g d docker
+abbr -a -g dc docker compose
+abbr -a -g v vagrant
+abbr -a -g y yarn
+abbr -a -g be bundle exec
