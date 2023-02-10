@@ -1,5 +1,5 @@
-abbr -a -g l ls -lFG
-abbr -a -g la ls -lFGa
+abbr -a -g l ls -lF
+abbr -a -g la ls -lFa
 abbr -a -g g git
 abbr -a -g n npm
 abbr -a -g nr npm run
