@@ -6,3 +6,7 @@ if type brew &> /dev/null
   # enable asdf shims
   . (brew --prefix asdf)/libexec/asdf.fish
 end
+
+# enable direnv
+direnv hook fish | source
+
