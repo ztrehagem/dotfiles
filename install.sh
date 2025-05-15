@@ -4,7 +4,6 @@ cd ~
 
 # fish
 mkdir -p ~/.config/fish
-touch ~/.config/fish/config.local.fish
 ln -sf ~/.dotfiles/shared/fish/config.fish ~/.config/fish/
 
 # zsh

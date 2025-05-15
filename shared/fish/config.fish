@@ -1,3 +1,7 @@
+if test -f ~/.config/fish/config.pre.fish
+	source ~/.config/fish/config.pre.fish
+end
+
 if status is-login
 	source ~/.dotfiles/shared/fish/env.fish
 	source ~/.dotfiles/shared/fish/brew.fish
@@ -7,6 +11,6 @@ if status is-login
 	source ~/.dotfiles/shared/fish/abbr.fish
 end
 
-if test -f ~/.config/fish/config.local.fish
-	source ~/.config/fish/config.local.fish
+if test -f ~/.config/fish/config.post.fish
+	source ~/.config/fish/config.post.fish
 end
