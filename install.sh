@@ -4,18 +4,18 @@ cd ~
 
 # fish
 mkdir -p ~/.config/fish
-ln -sf ~/.dotfiles/shared/fish/config.fish ~/.config/fish/
+ln -si ~/.dotfiles/shared/fish/config.fish ~/.config/fish/
 
 # zsh
-ln -sf ~/.dotfiles/shared/zsh/.zprofile ~/
+ln -si ~/.dotfiles/shared/zsh/.zprofile ~/
 
 # git
 mkdir -p ~/.config/git
-ln -sf ~/.dotfiles/shared/git/ignore ~/.config/git/
+ln -si ~/.dotfiles/shared/git/ignore ~/.config/git/
 git config set --global include.path ~/.dotfiles/shared/git/.gitconfig
 
 # asdf
-ln -sf ~/.dotfiles/shared/asdf/.asdfrc ~/
+ln -si ~/.dotfiles/shared/asdf/.asdfrc ~/
 
 # tmux
-ln -sf ~/.dotfiles/shared/tmux/.tmux.conf ~/
+ln -si ~/.dotfiles/shared/tmux/.tmux.conf ~/
