@@ -1,12 +1,14 @@
 [user]
 	name = SUWA Shigeki
 	email = shigeki.suwa@ztrehagem.dev
-	signingkey = ~/.ssh/git.pub
+	# signingkey = ~/.ssh/git.pub
 [commit]
 	gpgsign = false
 	# gpgsign = true
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	defaultKeyCommand = ssh-add -L
 [credential]
 	helper = cache
 	# helper = osxkeychain
