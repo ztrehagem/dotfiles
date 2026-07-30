@@ -12,6 +12,7 @@ ln -si ~/.dotfiles/shared/zsh/.zprofile ~/
 # git
 mkdir -p ~/.config/git
 ln -si ~/.dotfiles/shared/git/ignore ~/.config/git/
+ln -si ~/.dotfiles/shared/git/allowed_signers ~/.config/git/
 git config set --global include.path ~/.dotfiles/shared/git/.gitconfig
 
 # asdf

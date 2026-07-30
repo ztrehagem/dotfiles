@@ -1,14 +1,13 @@
 [user]
 	name = SUWA Shigeki
 	email = shigeki.suwa@ztrehagem.dev
-	# signingkey = ~/.ssh/git.pub
 [commit]
-	gpgsign = false
-	# gpgsign = true
+	gpgsign = true
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	defaultKeyCommand = ssh-add -L
+	defaultKeyCommand = "bash -c 'ssh-add -L | grep git-commit@ztrehagem.dev'"
+	allowedSignersFile = ~/.config/git/allowed_signers
 [credential]
 	helper = cache
 	# helper = osxkeychain
