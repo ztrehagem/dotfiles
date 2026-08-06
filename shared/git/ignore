@@ -4,3 +4,5 @@
 vendor/bundle
 */vendor/bundle
 .envrc
+.tool-versions
+
